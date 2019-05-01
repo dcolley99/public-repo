@@ -2,7 +2,7 @@ import pyodbc, string
 
 conn = pyodbc.connect('Driver={SQL Server};'
                       'Server=localhost;'
-                      'Database=Cydney;'
+                      'Database=AdventureWorksLT2017;'
                       'Trusted_Connection=yes' )
 cursor = conn.cursor()
 cursor = conn.execute('SELECT name FROM sys.tables;')
