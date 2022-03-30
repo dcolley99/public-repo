@@ -1,0 +1,8 @@
+Metric, Range, Unit
+Peak CPU load(%), 0-100, % 
+Avg. CPU load(%), 0-100, %
+Peak I/O load, 0-inf., IOPS
+Avg. I/O load, 0-inf., IOPS
+Total Mem. Use, 0-inf., MB
+Total Subtree Cost, 0-inf., relative
+Total duration, 0-inf., ms

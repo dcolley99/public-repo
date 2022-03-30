@@ -1,0 +1,2970 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/14/2022 7:32:50 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-0O4TRA5Q"
+  DTS:CreatorName="LAPTOP-0O4TRA5Q\derek"
+  DTS:DTSID="{E8A453C8-31BA-48F7-B46F-0063B3E094E3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.166"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{4BACF4FF-D56E-4D68-8AAE-ED97C7A87065}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Control 100k]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F051E16B-EFE0-4BFE-BAA8-FB0A7E388DD5}"
+      DTS:ObjectName="Control 100k">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\git\current\_papers\Active\delta_summation\research_public_controlRandom100k.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UQID"
+              DTS:DTSID="{7371507E-9A00-4A77-B1A1-36D1BB4797F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{7D3DA3BD-35CF-4ADD-8D3E-A3EF9620CB6F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="304"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateTimeStamp"
+              DTS:DTSID="{7E89E63F-089B-40AE-A92B-ACE22FF8B258}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Control 1m]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{99FDC4B8-F5E6-487E-9009-E8E9E21387D6}"
+      DTS:ObjectName="Control 1m">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\git\current\_papers\Active\delta_summation\research_public_controlRandom1m.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UQID"
+              DTS:DTSID="{D8D74C08-153F-4B83-BD2A-61A15B228F64}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{B4F07D79-D41E-43F3-8D22-CF7B9899D1D6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="304"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateTimeStamp"
+              DTS:DTSID="{113585B4-466E-4987-A74E-59F274F770C6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Delta 100k]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D0C20009-F344-4B44-89BC-3C5569D4A0B9}"
+      DTS:ObjectName="Delta 100k">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\git\current\_papers\Active\delta_summation\research_public_deltaTestRandom100k.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UQID"
+              DTS:DTSID="{5A9E273E-9AFA-4C2E-B14E-5955B12C3972}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{2BC04F4B-177A-4A03-949F-D9BBED82A7AD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateTimeIncrement"
+              DTS:DTSID="{52E9B040-E870-4B63-BFA0-C3FD3C0BCF0E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Delta 1m]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E364CA83-F872-4D67-96F5-EB86CEC2A8F1}"
+      DTS:ObjectName="Delta 1m">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\git\current\_papers\Active\delta_summation\research_public_deltaTestRandom1m.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UQID"
+              DTS:DTSID="{F45D78F5-2230-43D5-8BBE-EF766B437C4D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{9A4600A4-8335-4D33-B787-CBEEDCC35EB9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateTimeIncrement"
+              DTS:DTSID="{1FC3B416-8D32-4856-8AAA-9DCE751BE751}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.delta_exp]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0095B4B1-EA0E-4C2B-ABC1-17F4876AE5D2}"
+      DTS:ObjectName="localhost.delta_exp">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=delta_exp;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com.postgres_del]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{164C6CEB-C22A-4C0D-BC7B-05F662043602}"
+      DTS:ObjectName="pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com.postgres_del">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="data source=pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com;user id=postgres_del;Dsn=pgsql-research;database=research;trust server certificate=True;ignore server certificate insecurity=True;schema=public;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgmtpjj6hU6KReMWEdkjuwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAlzbbYnVyoG++fY0V6fNw3VXLHI7VkMNI8hoRG18K1qgAAAAAOgAAAAAIAACAAAABb82Rs0nwqQyrfrXCmAqY3i3Nqwebm4IxuBYHSyufEbEAAAABuT6QOlRWt9RwmBXSvGatzaNT69vM7o+rMBL2C6+oUiMjZa4Y/vo29fcHwxV0gBjKYDg6IbbCuxeMlksSqJgDeQAAAACUu+l2nC4bLxu7qc5nNNeE0klrAUGxAcQjPP6LyF6bIoLAYauQ/G/eC1mPohZZu5IYvl1At1cAYHQvx5GqYNfQ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Control"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{9915E140-E41D-45E1-8B9D-5396B5F19C65}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Control">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Control\Control 100k"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{B3BDD3DF-304B-4DE8-84CF-0AA4137196D5}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Control 100k"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Control\Control 100k\Control 100k Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Control 100k Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[controlRandom100k]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Control\Control 100k\Control 100k Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.delta_exp]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.delta_exp]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Control\Control 100k\Control 100k Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Control\Control 100k\Control 100k Destination.Inputs[OLE DB Destination Input].Columns[UQID]"
+                          cachedDataType="i4"
+                          cachedName="UQID"
+                          externalMetadataColumnId="Package\Control\Control 100k\Control 100k Destination.Inputs[OLE DB Destination Input].ExternalColumns[UQID]"
+                          lineageId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].Columns[UQID]" />
+                        <inputColumn
+                          refId="Package\Control\Control 100k\Control 100k Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="20"
+                          cachedName="Category"
+                          externalMetadataColumnId="Package\Control\Control 100k\Control 100k Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          lineageId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].Columns[Category]" />
+                        <inputColumn
+                          refId="Package\Control\Control 100k\Control 100k Destination.Inputs[OLE DB Destination Input].Columns[DateTimeStamp]"
+                          cachedDataType="dbTimeStamp2"
+                          cachedName="DateTimeStamp"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\Control\Control 100k\Control 100k Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateTimeStamp]"
+                          lineageId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].Columns[DateTimeStamp]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 100k\Control 100k Destination.Inputs[OLE DB Destination Input].ExternalColumns[UQID]"
+                          dataType="i8"
+                          name="UQID" />
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 100k\Control 100k Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 100k\Control 100k Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateTimeStamp]"
+                          dataType="dbTimeStamp2"
+                          name="DateTimeStamp" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Control\Control 100k\Control 100k Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Control\Control 100k\Control 100k Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Control\Control 100k\Control 100k Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Control\Control 100k\Control 100k Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Control\Control 100k\Control 100k Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Control\Control 100k\Control 100k Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Control\Control 100k\pgsql-research - Control 100k"
+                  componentClassID="Microsoft.SSISODBCSrc"
+                  contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="ODBC Source"
+                  name="pgsql-research - Control 100k"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The name of the table to be fetched."
+                      expressionType="Notify"
+                      name="TableName">"public"."controlRandom100k"</property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows fetched per batch."
+                      expressionType="Notify"
+                      name="BatchSize">1000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines the chunk size allocation for LOB columns"
+                      expressionType="Notify"
+                      name="LobChunkSize">32768</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                      expressionType="Notify"
+                      name="ExposeCharColumnsAsUnicode">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                      expressionType="Notify"
+                      name="StatementTimeout">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The code page to use when code page information is unavailable from the data source."
+                      expressionType="Notify"
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The method used for fetching data."
+                      expressionType="Notify"
+                      name="FetchMethod">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The ODBC C data type for binding numeric data."
+                      expressionType="Notify"
+                      name="BindNumericAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                      expressionType="Notify"
+                      name="BindCharColumnsAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The mode used to access the database."
+                      expressionType="Notify"
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Control\Control 100k\pgsql-research - Control 100k.Connections[ODBCConnection]"
+                      connectionManagerID="Package.ConnectionManagers[pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com.postgres_del]"
+                      connectionManagerRefId="Package.ConnectionManagers[pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com.postgres_del]"
+                      description="The ODBC runtime connection used to access the database."
+                      name="ODBCConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output]"
+                      errorRowDisposition="FailComponent"
+                      name="ODBC Source Output"
+                      truncationRowDisposition="FailComponent">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].Columns[UQID]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          lineageId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].Columns[UQID]"
+                          name="UQID" />
+                        <outputColumn
+                          refId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          length="20"
+                          lineageId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].Columns[Category]"
+                          name="Category" />
+                        <outputColumn
+                          refId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].Columns[DateTimeStamp]"
+                          dataType="dbTimeStamp2"
+                          externalMetadataColumnId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].ExternalColumns[DateTimeStamp]"
+                          lineageId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].Columns[DateTimeStamp]"
+                          name="DateTimeStamp"
+                          scale="6" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          dataType="i4"
+                          name="UQID" />
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="20"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].ExternalColumns[DateTimeStamp]"
+                          dataType="dbTimeStamp2"
+                          name="DateTimeStamp"
+                          scale="6" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Error Output]"
+                      isErrorOut="true"
+                      name="ODBC Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Error Output].Columns[UQID]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          lineageId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Error Output].Columns[UQID]"
+                          name="UQID" />
+                        <outputColumn
+                          refId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Error Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          length="20"
+                          lineageId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Error Output].Columns[Category]"
+                          name="Category" />
+                        <outputColumn
+                          refId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Error Output].Columns[DateTimeStamp]"
+                          dataType="dbTimeStamp2"
+                          externalMetadataColumnId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output].ExternalColumns[DateTimeStamp]"
+                          lineageId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Error Output].Columns[DateTimeStamp]"
+                          name="DateTimeStamp"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Control\Control 100k.Paths[ODBC Source Output]"
+                  endId="Package\Control\Control 100k\Control 100k Destination.Inputs[OLE DB Destination Input]"
+                  name="ODBC Source Output"
+                  startId="Package\Control\Control 100k\pgsql-research - Control 100k.Outputs[ODBC Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Control\Control 10m"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{5b919751-8b13-481a-883e-ca2e17da8dc8}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Control 10m"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Control\Control 10m\Control 10m Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Control 10m Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[controlRandom10m]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Control\Control 10m\Control 10m Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.delta_exp]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.delta_exp]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Control\Control 10m\Control 10m Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Control\Control 10m\Control 10m Destination.Inputs[OLE DB Destination Input].Columns[UQID]"
+                          cachedDataType="i4"
+                          cachedName="UQID"
+                          externalMetadataColumnId="Package\Control\Control 10m\Control 10m Destination.Inputs[OLE DB Destination Input].ExternalColumns[UQID]"
+                          lineageId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].Columns[UQID]" />
+                        <inputColumn
+                          refId="Package\Control\Control 10m\Control 10m Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="20"
+                          cachedName="Category"
+                          externalMetadataColumnId="Package\Control\Control 10m\Control 10m Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          lineageId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].Columns[Category]" />
+                        <inputColumn
+                          refId="Package\Control\Control 10m\Control 10m Destination.Inputs[OLE DB Destination Input].Columns[DateTimeStamp]"
+                          cachedDataType="dbTimeStamp2"
+                          cachedName="DateTimeStamp"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\Control\Control 10m\Control 10m Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateTimeStamp]"
+                          lineageId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].Columns[DateTimeStamp]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 10m\Control 10m Destination.Inputs[OLE DB Destination Input].ExternalColumns[UQID]"
+                          dataType="i4"
+                          name="UQID" />
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 10m\Control 10m Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 10m\Control 10m Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateTimeStamp]"
+                          dataType="dbTimeStamp2"
+                          name="DateTimeStamp"
+                          scale="6" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Control\Control 10m\Control 10m Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Control\Control 10m\Control 10m Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Control\Control 10m\Control 10m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Control\Control 10m\Control 10m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Control\Control 10m\Control 10m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Control\Control 10m\Control 10m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Control\Control 10m\pgsql-research - Control 10m"
+                  componentClassID="Microsoft.SSISODBCSrc"
+                  contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="ODBC Source"
+                  name="pgsql-research - Control 10m"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The name of the table to be fetched."
+                      expressionType="Notify"
+                      name="TableName">"public"."controlRandom10m"</property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows fetched per batch."
+                      expressionType="Notify"
+                      name="BatchSize">1000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines the chunk size allocation for LOB columns"
+                      expressionType="Notify"
+                      name="LobChunkSize">32768</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                      expressionType="Notify"
+                      name="ExposeCharColumnsAsUnicode">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                      expressionType="Notify"
+                      name="StatementTimeout">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The code page to use when code page information is unavailable from the data source."
+                      expressionType="Notify"
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The method used for fetching data."
+                      expressionType="Notify"
+                      name="FetchMethod">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The ODBC C data type for binding numeric data."
+                      expressionType="Notify"
+                      name="BindNumericAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                      expressionType="Notify"
+                      name="BindCharColumnsAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The mode used to access the database."
+                      expressionType="Notify"
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Control\Control 10m\pgsql-research - Control 10m.Connections[ODBCConnection]"
+                      connectionManagerID="Package.ConnectionManagers[pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com.postgres_del]"
+                      connectionManagerRefId="Package.ConnectionManagers[pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com.postgres_del]"
+                      description="The ODBC runtime connection used to access the database."
+                      name="ODBCConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output]"
+                      errorRowDisposition="FailComponent"
+                      name="ODBC Source Output"
+                      truncationRowDisposition="FailComponent">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].Columns[UQID]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          lineageId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].Columns[UQID]"
+                          name="UQID" />
+                        <outputColumn
+                          refId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          length="20"
+                          lineageId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].Columns[Category]"
+                          name="Category" />
+                        <outputColumn
+                          refId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].Columns[DateTimeStamp]"
+                          dataType="dbTimeStamp2"
+                          externalMetadataColumnId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].ExternalColumns[DateTimeStamp]"
+                          lineageId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].Columns[DateTimeStamp]"
+                          name="DateTimeStamp"
+                          scale="6" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          dataType="i4"
+                          name="UQID" />
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="20"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].ExternalColumns[DateTimeStamp]"
+                          dataType="dbTimeStamp2"
+                          name="DateTimeStamp"
+                          scale="6" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Error Output]"
+                      isErrorOut="true"
+                      name="ODBC Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Error Output].Columns[UQID]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          lineageId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Error Output].Columns[UQID]"
+                          name="UQID" />
+                        <outputColumn
+                          refId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Error Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          length="20"
+                          lineageId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Error Output].Columns[Category]"
+                          name="Category" />
+                        <outputColumn
+                          refId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Error Output].Columns[DateTimeStamp]"
+                          dataType="dbTimeStamp2"
+                          externalMetadataColumnId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output].ExternalColumns[DateTimeStamp]"
+                          lineageId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Error Output].Columns[DateTimeStamp]"
+                          name="DateTimeStamp"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Control\Control 10m.Paths[ODBC Source Output]"
+                  endId="Package\Control\Control 10m\Control 10m Destination.Inputs[OLE DB Destination Input]"
+                  name="ODBC Source Output"
+                  startId="Package\Control\Control 10m\pgsql-research - Control 10m.Outputs[ODBC Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Control\Control 1m"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{b484551b-aeb0-4f98-a478-354e54dc9977}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Control 1m"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Control\Control 1m\Control 1m Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Control 1m Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[controlRandom1m]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Control\Control 1m\Control 1m Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.delta_exp]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.delta_exp]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Control\Control 1m\Control 1m Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Control\Control 1m\Control 1m Destination.Inputs[OLE DB Destination Input].Columns[UQID]"
+                          cachedDataType="i4"
+                          cachedName="UQID"
+                          externalMetadataColumnId="Package\Control\Control 1m\Control 1m Destination.Inputs[OLE DB Destination Input].ExternalColumns[UQID]"
+                          lineageId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].Columns[UQID]" />
+                        <inputColumn
+                          refId="Package\Control\Control 1m\Control 1m Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="20"
+                          cachedName="Category"
+                          externalMetadataColumnId="Package\Control\Control 1m\Control 1m Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          lineageId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].Columns[Category]" />
+                        <inputColumn
+                          refId="Package\Control\Control 1m\Control 1m Destination.Inputs[OLE DB Destination Input].Columns[DateTimeStamp]"
+                          cachedDataType="dbTimeStamp2"
+                          cachedName="DateTimeStamp"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\Control\Control 1m\Control 1m Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateTimeStamp]"
+                          lineageId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].Columns[DateTimeStamp]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 1m\Control 1m Destination.Inputs[OLE DB Destination Input].ExternalColumns[UQID]"
+                          dataType="i8"
+                          name="UQID" />
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 1m\Control 1m Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 1m\Control 1m Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateTimeStamp]"
+                          dataType="dbTimeStamp2"
+                          name="DateTimeStamp" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Control\Control 1m\Control 1m Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Control\Control 1m\Control 1m Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Control\Control 1m\Control 1m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Control\Control 1m\Control 1m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Control\Control 1m\Control 1m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Control\Control 1m\Control 1m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Control\Control 1m\pgsql-research - Control 1m"
+                  componentClassID="Microsoft.SSISODBCSrc"
+                  contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="ODBC Source"
+                  name="pgsql-research - Control 1m"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The name of the table to be fetched."
+                      expressionType="Notify"
+                      name="TableName">"public"."controlRandom1m"</property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows fetched per batch."
+                      expressionType="Notify"
+                      name="BatchSize">1000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines the chunk size allocation for LOB columns"
+                      expressionType="Notify"
+                      name="LobChunkSize">32768</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                      expressionType="Notify"
+                      name="ExposeCharColumnsAsUnicode">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                      expressionType="Notify"
+                      name="StatementTimeout">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The code page to use when code page information is unavailable from the data source."
+                      expressionType="Notify"
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The method used for fetching data."
+                      expressionType="Notify"
+                      name="FetchMethod">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The ODBC C data type for binding numeric data."
+                      expressionType="Notify"
+                      name="BindNumericAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                      expressionType="Notify"
+                      name="BindCharColumnsAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The mode used to access the database."
+                      expressionType="Notify"
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Control\Control 1m\pgsql-research - Control 1m.Connections[ODBCConnection]"
+                      connectionManagerID="Package.ConnectionManagers[pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com.postgres_del]"
+                      connectionManagerRefId="Package.ConnectionManagers[pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com.postgres_del]"
+                      description="The ODBC runtime connection used to access the database."
+                      name="ODBCConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output]"
+                      errorRowDisposition="FailComponent"
+                      name="ODBC Source Output"
+                      truncationRowDisposition="FailComponent">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].Columns[UQID]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          lineageId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].Columns[UQID]"
+                          name="UQID" />
+                        <outputColumn
+                          refId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          length="20"
+                          lineageId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].Columns[Category]"
+                          name="Category" />
+                        <outputColumn
+                          refId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].Columns[DateTimeStamp]"
+                          dataType="dbTimeStamp2"
+                          externalMetadataColumnId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].ExternalColumns[DateTimeStamp]"
+                          lineageId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].Columns[DateTimeStamp]"
+                          name="DateTimeStamp"
+                          scale="6" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          dataType="i4"
+                          name="UQID" />
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="20"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].ExternalColumns[DateTimeStamp]"
+                          dataType="dbTimeStamp2"
+                          name="DateTimeStamp"
+                          scale="6" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Error Output]"
+                      isErrorOut="true"
+                      name="ODBC Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Error Output].Columns[UQID]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          lineageId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Error Output].Columns[UQID]"
+                          name="UQID" />
+                        <outputColumn
+                          refId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Error Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          length="20"
+                          lineageId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Error Output].Columns[Category]"
+                          name="Category" />
+                        <outputColumn
+                          refId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Error Output].Columns[DateTimeStamp]"
+                          dataType="dbTimeStamp2"
+                          externalMetadataColumnId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output].ExternalColumns[DateTimeStamp]"
+                          lineageId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Error Output].Columns[DateTimeStamp]"
+                          name="DateTimeStamp"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Control\Control 1m.Paths[ODBC Source Output]"
+                  endId="Package\Control\Control 1m\Control 1m Destination.Inputs[OLE DB Destination Input]"
+                  name="ODBC Source Output"
+                  startId="Package\Control\Control 1m\pgsql-research - Control 1m.Outputs[ODBC Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Control.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{47B02561-3D01-4D81-BE03-ECF436F11D92}"
+          DTS:From="Package\Control\Control 100k"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Control\Control 1m" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Control.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{28860CD3-E31D-4F0F-A185-B28D5FA204BC}"
+          DTS:From="Package\Control\Control 1m"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Control\Control 10m" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Delta"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{85747EE6-2856-4DA7-A61D-8B2CBFAE80A7}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Delta">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Delta\Delta 100k"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{632A58BC-5F56-43AE-8159-FF5F0BFE2227}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Delta 100k"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Delta\Delta 100k\Delta 100k Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Delta 100k Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[deltaRandom100k]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Delta\Delta 100k\Delta 100k Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.delta_exp]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.delta_exp]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Delta\Delta 100k\Delta 100k Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Delta\Delta 100k\Delta 100k Destination.Inputs[OLE DB Destination Input].Columns[UQID]"
+                          cachedDataType="i4"
+                          cachedName="UQID"
+                          externalMetadataColumnId="Package\Delta\Delta 100k\Delta 100k Destination.Inputs[OLE DB Destination Input].ExternalColumns[UQID]"
+                          lineageId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].Columns[UQID]" />
+                        <inputColumn
+                          refId="Package\Delta\Delta 100k\Delta 100k Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="20"
+                          cachedName="Category"
+                          externalMetadataColumnId="Package\Delta\Delta 100k\Delta 100k Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          lineageId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].Columns[Category]" />
+                        <inputColumn
+                          refId="Package\Delta\Delta 100k\Delta 100k Destination.Inputs[OLE DB Destination Input].Columns[DateTimeIncrement]"
+                          cachedDataType="r8"
+                          cachedName="DateTimeIncrement"
+                          externalMetadataColumnId="Package\Delta\Delta 100k\Delta 100k Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateTimeIncrement]"
+                          lineageId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].Columns[DateTimeIncrement]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 100k\Delta 100k Destination.Inputs[OLE DB Destination Input].ExternalColumns[UQID]"
+                          dataType="i8"
+                          name="UQID" />
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 100k\Delta 100k Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 100k\Delta 100k Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateTimeIncrement]"
+                          dataType="r4"
+                          name="DateTimeIncrement" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Delta\Delta 100k\Delta 100k Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Delta\Delta 100k\Delta 100k Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Delta\Delta 100k\Delta 100k Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Delta\Delta 100k\Delta 100k Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 100k\Delta 100k Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Delta\Delta 100k\Delta 100k Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k"
+                  componentClassID="Microsoft.SSISODBCSrc"
+                  contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="ODBC Source"
+                  name="pgsql-research - Delta 100k"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The name of the table to be fetched."
+                      expressionType="Notify"
+                      name="TableName">"public"."deltaTestRandom100k"</property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows fetched per batch."
+                      expressionType="Notify"
+                      name="BatchSize">1000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines the chunk size allocation for LOB columns"
+                      expressionType="Notify"
+                      name="LobChunkSize">32768</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                      expressionType="Notify"
+                      name="ExposeCharColumnsAsUnicode">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                      expressionType="Notify"
+                      name="StatementTimeout">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The code page to use when code page information is unavailable from the data source."
+                      expressionType="Notify"
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The method used for fetching data."
+                      expressionType="Notify"
+                      name="FetchMethod">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The ODBC C data type for binding numeric data."
+                      expressionType="Notify"
+                      name="BindNumericAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                      expressionType="Notify"
+                      name="BindCharColumnsAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The mode used to access the database."
+                      expressionType="Notify"
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Connections[ODBCConnection]"
+                      connectionManagerID="Package.ConnectionManagers[pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com.postgres_del]"
+                      connectionManagerRefId="Package.ConnectionManagers[pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com.postgres_del]"
+                      description="The ODBC runtime connection used to access the database."
+                      name="ODBCConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output]"
+                      errorRowDisposition="FailComponent"
+                      name="ODBC Source Output"
+                      truncationRowDisposition="FailComponent">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].Columns[UQID]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          lineageId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].Columns[UQID]"
+                          name="UQID" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          length="20"
+                          lineageId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].Columns[Category]"
+                          name="Category" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].Columns[DateTimeIncrement]"
+                          dataType="r8"
+                          externalMetadataColumnId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].ExternalColumns[DateTimeIncrement]"
+                          lineageId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].Columns[DateTimeIncrement]"
+                          name="DateTimeIncrement" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          dataType="i4"
+                          name="UQID" />
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="20"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].ExternalColumns[DateTimeIncrement]"
+                          dataType="r8"
+                          name="DateTimeIncrement" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Error Output]"
+                      isErrorOut="true"
+                      name="ODBC Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Error Output].Columns[UQID]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          lineageId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Error Output].Columns[UQID]"
+                          name="UQID" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Error Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          length="20"
+                          lineageId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Error Output].Columns[Category]"
+                          name="Category" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Error Output].Columns[DateTimeIncrement]"
+                          dataType="r8"
+                          externalMetadataColumnId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output].ExternalColumns[DateTimeIncrement]"
+                          lineageId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Error Output].Columns[DateTimeIncrement]"
+                          name="DateTimeIncrement" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Delta\Delta 100k.Paths[ODBC Source Output]"
+                  endId="Package\Delta\Delta 100k\Delta 100k Destination.Inputs[OLE DB Destination Input]"
+                  name="ODBC Source Output"
+                  startId="Package\Delta\Delta 100k\pgsql-research - Delta 100k.Outputs[ODBC Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Delta\Delta 10m"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{c386d41d-0ea7-48cf-bb5e-78ecc62e2939}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Delta 10m"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Delta\Delta 10m\Delta 10m Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Delta 10m Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[deltaRandom10m]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Delta\Delta 10m\Delta 10m Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.delta_exp]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.delta_exp]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Delta\Delta 10m\Delta 10m Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Delta\Delta 10m\Delta 10m Destination.Inputs[OLE DB Destination Input].Columns[UQID]"
+                          cachedDataType="i4"
+                          cachedName="UQID"
+                          externalMetadataColumnId="Package\Delta\Delta 10m\Delta 10m Destination.Inputs[OLE DB Destination Input].ExternalColumns[UQID]"
+                          lineageId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].Columns[UQID]" />
+                        <inputColumn
+                          refId="Package\Delta\Delta 10m\Delta 10m Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="20"
+                          cachedName="Category"
+                          externalMetadataColumnId="Package\Delta\Delta 10m\Delta 10m Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          lineageId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].Columns[Category]" />
+                        <inputColumn
+                          refId="Package\Delta\Delta 10m\Delta 10m Destination.Inputs[OLE DB Destination Input].Columns[DateTimeIncrement]"
+                          cachedDataType="r8"
+                          cachedName="DateTimeIncrement"
+                          externalMetadataColumnId="Package\Delta\Delta 10m\Delta 10m Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateTimeIncrement]"
+                          lineageId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].Columns[DateTimeIncrement]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 10m\Delta 10m Destination.Inputs[OLE DB Destination Input].ExternalColumns[UQID]"
+                          dataType="i4"
+                          name="UQID" />
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 10m\Delta 10m Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="20"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 10m\Delta 10m Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateTimeIncrement]"
+                          dataType="r8"
+                          name="DateTimeIncrement" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Delta\Delta 10m\Delta 10m Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Delta\Delta 10m\Delta 10m Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Delta\Delta 10m\Delta 10m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Delta\Delta 10m\Delta 10m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 10m\Delta 10m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Delta\Delta 10m\Delta 10m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m"
+                  componentClassID="Microsoft.SSISODBCSrc"
+                  contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="ODBC Source"
+                  name="pgsql-research - Delta 10m"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The name of the table to be fetched."
+                      expressionType="Notify"
+                      name="TableName">"public"."deltaTestRandom10m"</property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows fetched per batch."
+                      expressionType="Notify"
+                      name="BatchSize">1000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines the chunk size allocation for LOB columns"
+                      expressionType="Notify"
+                      name="LobChunkSize">32768</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                      expressionType="Notify"
+                      name="ExposeCharColumnsAsUnicode">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                      expressionType="Notify"
+                      name="StatementTimeout">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The code page to use when code page information is unavailable from the data source."
+                      expressionType="Notify"
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The method used for fetching data."
+                      expressionType="Notify"
+                      name="FetchMethod">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The ODBC C data type for binding numeric data."
+                      expressionType="Notify"
+                      name="BindNumericAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                      expressionType="Notify"
+                      name="BindCharColumnsAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The mode used to access the database."
+                      expressionType="Notify"
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Connections[ODBCConnection]"
+                      connectionManagerID="Package.ConnectionManagers[pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com.postgres_del]"
+                      connectionManagerRefId="Package.ConnectionManagers[pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com.postgres_del]"
+                      description="The ODBC runtime connection used to access the database."
+                      name="ODBCConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output]"
+                      errorRowDisposition="FailComponent"
+                      name="ODBC Source Output"
+                      truncationRowDisposition="FailComponent">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].Columns[UQID]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          lineageId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].Columns[UQID]"
+                          name="UQID" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          length="20"
+                          lineageId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].Columns[Category]"
+                          name="Category" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].Columns[DateTimeIncrement]"
+                          dataType="r8"
+                          externalMetadataColumnId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].ExternalColumns[DateTimeIncrement]"
+                          lineageId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].Columns[DateTimeIncrement]"
+                          name="DateTimeIncrement" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          dataType="i4"
+                          name="UQID" />
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="20"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].ExternalColumns[DateTimeIncrement]"
+                          dataType="r8"
+                          name="DateTimeIncrement" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Error Output]"
+                      isErrorOut="true"
+                      name="ODBC Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Error Output].Columns[UQID]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          lineageId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Error Output].Columns[UQID]"
+                          name="UQID" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Error Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          length="20"
+                          lineageId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Error Output].Columns[Category]"
+                          name="Category" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Error Output].Columns[DateTimeIncrement]"
+                          dataType="r8"
+                          externalMetadataColumnId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output].ExternalColumns[DateTimeIncrement]"
+                          lineageId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Error Output].Columns[DateTimeIncrement]"
+                          name="DateTimeIncrement" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Delta\Delta 10m.Paths[ODBC Source Output]"
+                  endId="Package\Delta\Delta 10m\Delta 10m Destination.Inputs[OLE DB Destination Input]"
+                  name="ODBC Source Output"
+                  startId="Package\Delta\Delta 10m\pgsql-research - Delta 10m.Outputs[ODBC Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Delta\Delta 1m"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{fd4be230-ac09-4104-9461-1b105fe1851f}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Delta 1m"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Delta\Delta 1m\Delta 1m Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Delta 1m Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[deltaRandom1m]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Delta\Delta 1m\Delta 1m Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.delta_exp]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.delta_exp]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Delta\Delta 1m\Delta 1m Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Delta\Delta 1m\Delta 1m Destination.Inputs[OLE DB Destination Input].Columns[UQID]"
+                          cachedDataType="i4"
+                          cachedName="UQID"
+                          externalMetadataColumnId="Package\Delta\Delta 1m\Delta 1m Destination.Inputs[OLE DB Destination Input].ExternalColumns[UQID]"
+                          lineageId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].Columns[UQID]" />
+                        <inputColumn
+                          refId="Package\Delta\Delta 1m\Delta 1m Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="20"
+                          cachedName="Category"
+                          externalMetadataColumnId="Package\Delta\Delta 1m\Delta 1m Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          lineageId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].Columns[Category]" />
+                        <inputColumn
+                          refId="Package\Delta\Delta 1m\Delta 1m Destination.Inputs[OLE DB Destination Input].Columns[DateTimeIncrement]"
+                          cachedDataType="r8"
+                          cachedName="DateTimeIncrement"
+                          externalMetadataColumnId="Package\Delta\Delta 1m\Delta 1m Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateTimeIncrement]"
+                          lineageId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].Columns[DateTimeIncrement]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 1m\Delta 1m Destination.Inputs[OLE DB Destination Input].ExternalColumns[UQID]"
+                          dataType="i8"
+                          name="UQID" />
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 1m\Delta 1m Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 1m\Delta 1m Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateTimeIncrement]"
+                          dataType="r4"
+                          name="DateTimeIncrement" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Delta\Delta 1m\Delta 1m Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Delta\Delta 1m\Delta 1m Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Delta\Delta 1m\Delta 1m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Delta\Delta 1m\Delta 1m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 1m\Delta 1m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Delta\Delta 1m\Delta 1m Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m"
+                  componentClassID="Microsoft.SSISODBCSrc"
+                  contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="ODBC Source"
+                  name="pgsql-research - Delta 1m"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The name of the table to be fetched."
+                      expressionType="Notify"
+                      name="TableName">"public"."deltaTestRandom1m"</property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows fetched per batch."
+                      expressionType="Notify"
+                      name="BatchSize">1000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines the chunk size allocation for LOB columns"
+                      expressionType="Notify"
+                      name="LobChunkSize">32768</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                      expressionType="Notify"
+                      name="ExposeCharColumnsAsUnicode">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                      expressionType="Notify"
+                      name="StatementTimeout">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The code page to use when code page information is unavailable from the data source."
+                      expressionType="Notify"
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The method used for fetching data."
+                      expressionType="Notify"
+                      name="FetchMethod">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The ODBC C data type for binding numeric data."
+                      expressionType="Notify"
+                      name="BindNumericAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                      expressionType="Notify"
+                      name="BindCharColumnsAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The mode used to access the database."
+                      expressionType="Notify"
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Connections[ODBCConnection]"
+                      connectionManagerID="Package.ConnectionManagers[pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com.postgres_del]"
+                      connectionManagerRefId="Package.ConnectionManagers[pgsql-research.crmehlaeqqov.eu-west-2.rds.amazonaws.com.postgres_del]"
+                      description="The ODBC runtime connection used to access the database."
+                      name="ODBCConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output]"
+                      errorRowDisposition="FailComponent"
+                      name="ODBC Source Output"
+                      truncationRowDisposition="FailComponent">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].Columns[UQID]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          lineageId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].Columns[UQID]"
+                          name="UQID" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          length="20"
+                          lineageId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].Columns[Category]"
+                          name="Category" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].Columns[DateTimeIncrement]"
+                          dataType="r8"
+                          externalMetadataColumnId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].ExternalColumns[DateTimeIncrement]"
+                          lineageId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].Columns[DateTimeIncrement]"
+                          name="DateTimeIncrement" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          dataType="i4"
+                          name="UQID" />
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="20"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].ExternalColumns[DateTimeIncrement]"
+                          dataType="r8"
+                          name="DateTimeIncrement" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Error Output]"
+                      isErrorOut="true"
+                      name="ODBC Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Error Output].Columns[UQID]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].ExternalColumns[UQID]"
+                          lineageId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Error Output].Columns[UQID]"
+                          name="UQID" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Error Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].ExternalColumns[Category]"
+                          length="20"
+                          lineageId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Error Output].Columns[Category]"
+                          name="Category" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Error Output].Columns[DateTimeIncrement]"
+                          dataType="r8"
+                          externalMetadataColumnId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output].ExternalColumns[DateTimeIncrement]"
+                          lineageId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Error Output].Columns[DateTimeIncrement]"
+                          name="DateTimeIncrement" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Delta\Delta 1m.Paths[ODBC Source Output]"
+                  endId="Package\Delta\Delta 1m\Delta 1m Destination.Inputs[OLE DB Destination Input]"
+                  name="ODBC Source Output"
+                  startId="Package\Delta\Delta 1m\pgsql-research - Delta 1m.Outputs[ODBC Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Delta.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{2533C450-B613-45E8-A622-7DE54BAB3A06}"
+          DTS:From="Package\Delta\Delta 100k"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Delta\Delta 1m" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Delta.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{8CCDE126-89B7-4938-AE38-082D479375A0}"
+          DTS:From="Package\Delta\Delta 1m"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Delta\Delta 10m" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate target tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{0C4D3A10-E68D-4E85-831E-329BF5B9490C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate target tables"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0095B4B1-EA0E-4C2B-ABC1-17F4876AE5D2}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE controlRandom100k;&#xA;TRUNCATE TABLE controlRandom1m; &#xA;TRUNCATE TABLE controlRandom10m;&#xA;TRUNCATE TABLE deltaRandom100k;&#xA;TRUNCATE TABLE deltaRandom1m; &#xA;TRUNCATE TABLE deltaRandom10m;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{815DBF2D-F7CB-41A7-B3E6-1D9E6642C343}"
+      DTS:From="Package\Truncate target tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Control" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{722AF698-749C-4BD1-B574-F6333B415871}"
+      DTS:From="Package\Control"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Delta" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Control\Control 100k"
+          TopLeft="20.4999994039536,23.7000001446406" />
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\Control\Control 10m"
+          TopLeft="153.833327439096,196.166668181949" />
+        <NodeLayout
+          Size="128.8,41.6"
+          Id="Package\Control\Control 1m"
+          TopLeft="76.3333305186696,107.766667479409" />
+        <EdgeLayout
+          Id="Package\Control.PrecedenceConstraints[Constraint]"
+          TopLeft="89.2999994039536,65.3000001446406">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51.433331114716,42.4666673347684"
+              Start="0,0"
+              End="51.433331114716,34.9666673347684">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.2333336673842" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.2333336673842"
+                    Point2="0,21.2333336673842"
+                    Point3="4,21.2333336673842" />
+                  <mssgle:LineSegment
+                    End="47.433331114716,21.2333336673842" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47.433331114716,21.2333336673842"
+                    Point2="51.433331114716,21.2333336673842"
+                    Point3="51.433331114716,25.2333336673842" />
+                  <mssgle:LineSegment
+                    End="51.433331114716,34.9666673347684" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Control.PrecedenceConstraints[Constraint 1]"
+          TopLeft="140.73333051867,149.366667479409">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="80.6999969204269,46.8000007025402"
+              Start="0,0"
+              End="80.6999969204269,39.3000007025402">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.4000003512701" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.4000003512701"
+                    Point2="0,23.4000003512701"
+                    Point3="4,23.4000003512701" />
+                  <mssgle:LineSegment
+                    End="76.6999969204269,23.4000003512701" />
+                  <mssgle:CubicBezierSegment
+                    Point1="76.6999969204269,23.4000003512701"
+                    Point2="80.6999969204269,23.4000003512701"
+                    Point3="80.6999969204269,27.4000003512701" />
+                  <mssgle:LineSegment
+                    End="80.6999969204269,39.3000007025402" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="324,292.8"
+          Size="324,336"
+          Id="Package\Control"
+          TopLeft="94.9999962250392,183.733334793515" />
+        <NodeLayout
+          Size="128,41.6"
+          Id="Package\Delta\Delta 100k"
+          TopLeft="27.3666458381555,26.2666680579716" />
+        <NodeLayout
+          Size="125.6,41.6"
+          Id="Package\Delta\Delta 10m"
+          TopLeft="107.233313332665,197.566667334769" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Delta\Delta 1m"
+          TopLeft="70.6999774495767,118.133335454729" />
+        <EdgeLayout
+          Id="Package\Delta.PrecedenceConstraints[Constraint]"
+          TopLeft="91.3666458381555,67.8666680579716">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="39.3333316114212,50.2666673967573"
+              Start="0,0"
+              End="39.3333316114212,42.7666673967573">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.1333336983786" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.1333336983786"
+                    Point2="0,25.1333336983786"
+                    Point3="4,25.1333336983786" />
+                  <mssgle:LineSegment
+                    End="35.3333316114212,25.1333336983786" />
+                  <mssgle:CubicBezierSegment
+                    Point1="35.3333316114212,25.1333336983786"
+                    Point2="39.3333316114212,25.1333336983786"
+                    Point3="39.3333316114212,29.1333336983786" />
+                  <mssgle:LineSegment
+                    End="39.3333316114212,42.7666673967573" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Delta.PrecedenceConstraints[Constraint 1]"
+          TopLeft="130.699977449577,159.733335454729">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="39.3333358830878,37.8333318800397"
+              Start="0,0"
+              End="39.3333358830878,30.3333318800397">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.9166659400198" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.9166659400198"
+                    Point2="0,18.9166659400198"
+                    Point3="4,18.9166659400198" />
+                  <mssgle:LineSegment
+                    End="35.3333358830878,18.9166659400198" />
+                  <mssgle:CubicBezierSegment
+                    Point1="35.3333358830878,18.9166659400198"
+                    Point2="39.3333358830878,18.9166659400198"
+                    Point3="39.3333358830878,22.9166659400198" />
+                  <mssgle:LineSegment
+                    End="39.3333358830878,30.3333318800397" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="312.8,298.4"
+          Size="312.8,341.6"
+          Id="Package\Delta"
+          TopLeft="503.333313332664,186.333334814177" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Truncate target tables"
+          TopLeft="159.999993642172,89.2666673760944" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="253.299994933605,130.866667376094">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.8666674174208"
+              Start="0,0"
+              End="0,45.3666674174208">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.3666674174208" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="418.999996225039,354.433334803846">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84.3333171076251,0"
+              Start="0,0"
+              End="76.8333171076251,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="76.8333171076251,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Control\Control 100k">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="192,41.6"
+          Id="Package\Control\Control 100k\Control 100k Destination"
+          TopLeft="90.8333297239411,162.066667954657" />
+        <NodeLayout
+          Size="215.2,41.6"
+          Id="Package\Control\Control 100k\pgsql-research - Control 100k"
+          TopLeft="58.8333297239411,60.666667954657" />
+        <EdgeLayout
+          Id="Package\Control\Control 100k.Paths[ODBC Source Output]"
+          TopLeft="166.433329723941,102.266667954657">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.4,59.8"
+              Start="0,0"
+              End="20.4,52.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.9"
+                    Point2="0,29.9"
+                    Point3="4,29.9" />
+                  <mssgle:LineSegment
+                    End="16.4,29.9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.4,29.9"
+                    Point2="20.4,29.9"
+                    Point3="20.4,33.9" />
+                  <mssgle:LineSegment
+                    End="20.4,52.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Control\Control 100k\Control 100k Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Control\Control 10m">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="212.8,41.6"
+          Id="Package\Control\Control 10m\pgsql-research - Control 10m"
+          TopLeft="325,93" />
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\Control\Control 10m\Control 10m Destination"
+          TopLeft="334.833329723941,184.066667954657" />
+        <EdgeLayout
+          Id="Package\Control\Control 10m.Paths[ODBC Source Output]"
+          TopLeft="430.516664861971,134.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.466667954657"
+              Start="0,0"
+              End="0,41.966667954657">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.966667954657" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Control\Control 10m\Control 10m Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Control\Control 10m\pgsql-research - Control 10m">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Control\Control 1m">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="184,41.6"
+          Id="Package\Control\Control 1m\Control 1m Destination"
+          TopLeft="90.8333297239411,162.066667954657" />
+        <NodeLayout
+          Size="207.2,41.6"
+          Id="Package\Control\Control 1m\pgsql-research - Control 1m"
+          TopLeft="49.8333297239411,71.666667954657" />
+        <EdgeLayout
+          Id="Package\Control\Control 1m.Paths[ODBC Source Output]"
+          TopLeft="153.433329723941,113.266667954657">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="29.4,48.8"
+              Start="0,0"
+              End="29.4,41.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4"
+                    Point2="0,24.4"
+                    Point3="4,24.4" />
+                  <mssgle:LineSegment
+                    End="25.4,24.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.4,24.4"
+                    Point2="29.4,24.4"
+                    Point3="29.4,28.4" />
+                  <mssgle:LineSegment
+                    End="29.4,41.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Control\Control 1m\Control 1m Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Delta\Delta 100k">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\Delta\Delta 100k\Delta 100k Destination"
+          TopLeft="130,141" />
+        <NodeLayout
+          Size="205.6,41.6"
+          Id="Package\Delta\Delta 100k\pgsql-research - Delta 100k"
+          TopLeft="63.0000000000001,46.6" />
+        <EdgeLayout
+          Id="Package\Delta\Delta 100k.Paths[ODBC Source Output]"
+          TopLeft="165.8,88.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="55.7999999999999,52.8"
+              Start="0,0"
+              End="55.7999999999999,45.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.4"
+                    Point2="0,26.4"
+                    Point3="4,26.4" />
+                  <mssgle:LineSegment
+                    End="51.7999999999999,26.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.7999999999999,26.4"
+                    Point2="55.7999999999999,26.4"
+                    Point3="55.7999999999999,30.4" />
+                  <mssgle:LineSegment
+                    End="55.7999999999999,45.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Delta\Delta 100k\Delta 100k Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Delta\Delta 10m">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="203.2,41.6"
+          Id="Package\Delta\Delta 10m\pgsql-research - Delta 10m"
+          TopLeft="325,93" />
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\Delta\Delta 10m\Delta 10m Destination"
+          TopLeft="382,173" />
+        <EdgeLayout
+          Id="Package\Delta\Delta 10m.Paths[ODBC Source Output]"
+          TopLeft="426.6,134.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45.8000000000001,38.4"
+              Start="0,0"
+              End="45.8000000000001,30.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.2"
+                    Point2="0,19.2"
+                    Point3="4,19.2" />
+                  <mssgle:LineSegment
+                    End="41.8000000000001,19.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.8000000000001,19.2"
+                    Point2="45.8000000000001,19.2"
+                    Point3="45.8000000000001,23.2" />
+                  <mssgle:LineSegment
+                    End="45.8000000000001,30.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Delta\Delta 10m\Delta 10m Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Delta\Delta 10m\pgsql-research - Delta 10m">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Delta\Delta 1m">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Delta\Delta 1m\Delta 1m Destination"
+          TopLeft="130,141" />
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\Delta\Delta 1m\pgsql-research - Delta 1m"
+          TopLeft="79,44.6" />
+        <EdgeLayout
+          Id="Package\Delta\Delta 1m.Paths[ODBC Source Output]"
+          TopLeft="177.8,86.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="39.8,54.8"
+              Start="0,0"
+              End="39.8,47.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.4"
+                    Point2="0,27.4"
+                    Point3="4,27.4" />
+                  <mssgle:LineSegment
+                    End="35.8,27.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="35.8,27.4"
+                    Point2="39.8,27.4"
+                    Point3="39.8,31.4" />
+                  <mssgle:LineSegment
+                    End="39.8,47.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Delta\Delta 1m\Delta 1m Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Delta\Delta 100k\pgsql-research - Delta 100k">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Delta\Delta 1m\pgsql-research - Delta 1m">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Control\Control 100k\pgsql-research - Control 100k">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Control\Control 1m\pgsql-research - Control 1m">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
