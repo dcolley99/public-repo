@@ -3,7 +3,10 @@ TRUNCATE TABLE results
 -- TEST 1: MSSQL, 100K, SELECT WITH PREDICATES
 DBCC FREEPROCCACHE 
 DBCC DROPCLEANBUFFERS
-GO 
+GO
+
+-- This comment represents some minor change. 
+
 
 SELECT  MAX(DateTimeStamp)
 FROM    controlRandom100k
